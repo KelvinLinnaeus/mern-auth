@@ -1,7 +1,11 @@
-import React from 'react'
-import { NavLink } from "react-router-dom"
+import React, { useState } from 'react'
+import { NavLink } from "react-router-dom"b
 
 function SignUp() {
+  const [formData, setFormDate] = useStateState({})
+  const handleChange = (event) => {
+
+  }
   return (
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl text-center font-semibold my-7'>Sign Up</h1>
@@ -11,18 +15,21 @@ function SignUp() {
           placeholder='Username'
           id='username'
           className='bg-slate-100 p-3 rounded-lg'
+          onChange={handleChange}
         />
         <input 
           type="email" 
           placeholder='Email'
           id='email'
           className='bg-slate-100 p-3 rounded-lg'
+          onChange={handleChange}
         />
         <input 
           type="password" 
           placeholder='Password'
           id='password'
           className='bg-slate-100 p-3 rounded-lg'
+          onChange={handleChange}
         />
         <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>Sign Up</button>
       </form>
