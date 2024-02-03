@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { NavLink } from "react-router-dom"b
+import { NavLink } from "react-router-dom"
 
 function SignUp() {
-  const [formData, setFormDate] = useStateState({})
+  const [formData, setFormDate] = useState({})
   const handleChange = (event) => {
 
   }
