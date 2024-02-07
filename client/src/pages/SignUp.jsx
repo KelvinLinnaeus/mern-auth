@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 
 function SignUp() {
   const [formData, setFormData] = useState({})
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
   const handleSubmit = async(event) => {
     event.preventDefault()
-    // const res = await fetch("http://localhost:3000/api/auth/signup", formData)
     try {
       setLoading(true)
       setError(false)
@@ -26,6 +26,7 @@ function SignUp() {
         setError(true)
         return
       }
+      navigate("/sign-in")
     } catch (error) {
       setLoading(false)
       setError(true)
